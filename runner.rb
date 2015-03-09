@@ -1,23 +1,8 @@
 require 'csv'
+require 'pry'
 require_relative 'album'
 
 albums = []
-
-class Album
-  def initialize(id, title, artists)
-    @id = id
-    @title = title
-    @artists = artists
-  end
-
-  def summary
-  end
-
-
-
-
-
-end
 
 CSV.foreach('space_jams.csv', headers: true, header_converters: :symbol) do |row|
   track = row.to_hash
